@@ -6,7 +6,7 @@
 
 ## Описание проекта
 
-Рассмотрены классические алгоритмы машинного обучения и базовые архитектуры нейронных сетей для разных типов данных. В каждом разделе приведены подготовка данных, анализ признаков, обучение и оценка моделей.
+В работах рассмотрены классические алгоритмы машинного обучения и базовые архитектуры нейронных сетей. Для каждой модели был выбран отдельный набор данных. В ноутбуках представлены проверка и подготовка данных, разведочный анализ, обучение моделей и оценка качества на тестовой выборке. Для второй практики предусмотрено обучение на выборках объёмом не менее 20 000 примеров.
 
 [Содержание и результаты](#results) · [Основные графики](#figures) · [Общий вывод](#conclusions)
 
@@ -16,20 +16,26 @@
 
 ### [Практическая работа №1. Классические алгоритмы машинного обучения](Practice_1/README.md)
 
-| Модель | Датасет | Метрики на Test | Графики |
+| Модель | Датасет | Метрики | Графики |
 |---|---|---|---:|
-| [Линейная регрессия](Practice_1/01_Linear_Regression/README.md) | Auto MPG | MAE = 2.462; RMSE = 3.256; R² = 0.792 | [15](Practice_1/01_Linear_Regression/README.md#figures) |
-| [Логистическая регрессия](Practice_1/02_Logistic_Regression/README.md) | Banknote Authentication | Accuracy = 0.985; Precision = 0.968; Recall = 1.000; F1-score = 0.984; ROC-AUC = 1.000 | [16](Practice_1/02_Logistic_Regression/README.md#figures) |
-| [Дерево решений](Practice_1/03_Decision_Tree/README.md) | Raisin | Accuracy = 0.872; Precision = 0.832; Recall = 0.933; F1-score = 0.880 | [16](Practice_1/03_Decision_Tree/README.md#figures) |
-| [Случайный лес](Practice_1/04_Random_Forest/README.md) | Dry Bean | Accuracy = 0.919; Macro Precision = 0.931; Macro Recall = 0.929; Macro F1-score = 0.930 | [16](Practice_1/04_Random_Forest/README.md#figures) |
+| [Линейная регрессия](Practice_1/01_Linear_Regression/README.md) · [Ноутбук](Practice_1/01_Linear_Regression/01_%D0%9B%D0%B8%D0%BD%D0%B5%D0%B9%D0%BD%D0%B0%D1%8F_%D1%80%D0%B5%D0%B3%D1%80%D0%B5%D1%81%D1%81%D0%B8%D1%8F_Auto_MPG.ipynb) | Auto MPG | MAE, RMSE, R² | [15](Practice_1/01_Linear_Regression/README.md#figures) |
+| [Логистическая регрессия](Practice_1/02_Logistic_Regression/README.md) · [Ноутбук](Practice_1/02_Logistic_Regression/02_%D0%9B%D0%BE%D0%B3%D0%B8%D1%81%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D1%80%D0%B5%D0%B3%D1%80%D0%B5%D1%81%D1%81%D0%B8%D1%8F_Banknote.ipynb) | Banknote Authentication | Accuracy, Precision, Recall, F1, ROC-AUC | [16](Practice_1/02_Logistic_Regression/README.md#figures) |
+| [Дерево решений](Practice_1/03_Decision_Tree/README.md) · [Ноутбук](Practice_1/03_Decision_Tree/03_%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D0%BE_%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D0%B9_Raisin.ipynb) | Raisin | Accuracy, Precision, Recall, F1 | [16](Practice_1/03_Decision_Tree/README.md#figures) |
+| [Случайный лес](Practice_1/04_Random_Forest/README.md) · [Ноутбук](Practice_1/04_Random_Forest/04_%D0%A1%D0%BB%D1%83%D1%87%D0%B0%D0%B9%D0%BD%D1%8B%D0%B9_%D0%BB%D0%B5%D1%81_Dry_Bean.ipynb) | Dry Bean | Accuracy, Macro Precision, Macro Recall, Macro F1 | [16](Practice_1/04_Random_Forest/README.md#figures) |
+
+Численные результаты и выводы по каждой модели приведены в [отчёте первой практики](Practice_1/README.md#results).
 
 ### [Практическая работа №2. Базовые архитектуры нейронных сетей](Practice_2/README.md)
 
-| Модель | Датасет | Метрики на Test | Графики |
-|---|---|---|---:|
-| [Полносвязная сеть (FCN)](Practice_2/01_FCN/README.md) | Pima Indians Diabetes | Accuracy = 0.707; Precision = 0.600; Recall = 0.512; F1-score = 0.553 | [6](Practice_2/01_FCN/README.md#figures) |
-| [Сверточная сеть (CNN)](Practice_2/02_CNN/README.md) | Optdigits | Accuracy = 0.853; Macro Precision = 0.859; Macro Recall = 0.852; Macro F1-score = 0.854 | [8](Practice_2/02_CNN/README.md#figures) |
-| [Рекуррентная сеть (RNN)](Practice_2/03_RNN/README.md) | Daily Minimum Temperatures | MAE = 1.739; RMSE = 2.236; R² = 0.671 | [7](Practice_2/03_RNN/README.md#figures) |
+| Модель | Датасет | Ожидаемый объём Train | Метрики | Графики |
+|---|---|---:|---|---:|
+| [Полносвязная нейронная сеть (FCN)](Practice_2/01_FCN/README.md) · [Ноутбук](Practice_2/01_FCN/01_fcn_bank_marketing.ipynb) | [UCI Bank Marketing](https://archive.ics.uci.edu/dataset/222/bank+marketing) | ≈31 600 | Accuracy, Macro F1, Precision и Recall для yes, ROC-AUC, AP | [12](Practice_2/01_FCN/README.md#figures) |
+| [Свёрточная нейронная сеть (CNN)](Practice_2/02_CNN/README.md) · [Ноутбук](Practice_2/02_CNN/02_cnn_fashion_mnist.ipynb) | [Fashion-MNIST, Zalando Research](https://github.com/zalandoresearch/fashion-mnist) | ≈51 000 | Accuracy, Macro F1 | [12](Practice_2/02_CNN/README.md#figures) |
+| [Рекуррентная нейронная сеть (RNN)](Practice_2/03_RNN/README.md) · [Ноутбук](Practice_2/03_RNN/03_rnn_jena_climate.ipynb) | [Jena Climate / Keras](https://keras.io/examples/timeseries/timeseries_weather_forecasting/) | ≈49 000 окон | MAE, RMSE, R²; MAE и RMSE базового прогноза | [12](Practice_2/03_RNN/README.md#figures) |
+
+Объёмы Train приведены ориентировочно; точное количество примеров после обработки и значения метрик содержатся в [сводном отчёте второй практики](Practice_2/README.md#results). Для RNN учитываются перекрывающиеся временные окна, а не независимые измерения.
+
+[Общий отчёт по трём моделям](Practice_2/00_All_Models/README.md) · [Объединённый ноутбук](Practice_2/00_All_Models/00_practice_2_all_networks.ipynb)
 
 <a name="figures"></a>
 
@@ -37,84 +43,76 @@
 
 ### Линейная регрессия
 
-Средняя абсолютная ошибка на тестовой выборке составила 2.462 MPG, RMSE — 3.256 MPG. R² = 0.792. Модель по квадратичной ошибке оказалась лучше прогноза среднего тестовой выборки.
+Прогноз числа миль на галлон топлива (MPG). На диаграмме сопоставляются фактические и предсказанные значения MPG. Отклонения от диагонали показывают ошибки прогноза.
 
 ![Фактические и предсказанные значения](Practice_1/01_Linear_Regression/figures/01_10.png)
 
-[Разбор графика](Practice_1/01_Linear_Regression/README.md#figure-10)
-
-[Отчёт модели](Practice_1/01_Linear_Regression/README.md) · [Ноутбук](Practice_1/01_Linear_Regression/01_%D0%9B%D0%B8%D0%BD%D0%B5%D0%B9%D0%BD%D0%B0%D1%8F_%D1%80%D0%B5%D0%B3%D1%80%D0%B5%D1%81%D1%81%D0%B8%D1%8F_Auto_MPG.ipynb) · [Практика](Practice_1/README.md#model-01)
+[Разбор графика](Practice_1/01_Linear_Regression/README.md#figure-10) · [Отчёт модели](Practice_1/01_Linear_Regression/README.md) · [Ноутбук](Practice_1/01_Linear_Regression/01_%D0%9B%D0%B8%D0%BD%D0%B5%D0%B9%D0%BD%D0%B0%D1%8F_%D1%80%D0%B5%D0%B3%D1%80%D0%B5%D1%81%D1%81%D0%B8%D1%8F_Auto_MPG.ipynb)
 
 ### Логистическая регрессия
 
-По матрице ошибок из 270 тестовых объектов правильно классифицировано 266, ошибочно — 4. Accuracy = 0.985. Наименьший Recall получен для класса 0: 0.973.
+Бинарная классификация банкнот. ROC-кривая показывает соотношение долей истинно положительных и ложноположительных решений при разных порогах классификации.
 
 ![ROC-кривая](Practice_1/02_Logistic_Regression/figures/02_10.png)
 
-[Разбор графика](Practice_1/02_Logistic_Regression/README.md#figure-10)
-
-[Отчёт модели](Practice_1/02_Logistic_Regression/README.md) · [Ноутбук](Practice_1/02_Logistic_Regression/02_%D0%9B%D0%BE%D0%B3%D0%B8%D1%81%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D1%80%D0%B5%D0%B3%D1%80%D0%B5%D1%81%D1%81%D0%B8%D1%8F_Banknote.ipynb) · [Практика](Practice_1/README.md#model-02)
+[Разбор графика](Practice_1/02_Logistic_Regression/README.md#figure-10) · [Отчёт модели](Practice_1/02_Logistic_Regression/README.md) · [Ноутбук](Practice_1/02_Logistic_Regression/02_%D0%9B%D0%BE%D0%B3%D0%B8%D1%81%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D1%80%D0%B5%D0%B3%D1%80%D0%B5%D1%81%D1%81%D0%B8%D1%8F_Banknote.ipynb)
 
 ### Дерево решений
 
-По матрице ошибок из 180 тестовых объектов правильно классифицировано 157, ошибочно — 23. Accuracy = 0.872. Наименьший Recall получен для класса Besni: 0.811.
+Определение сорта изюма по геометрическим признакам. На главной диагонали матрицы отражены правильные решения, вне диагонали — ошибки при определении сорта.
 
 ![Матрица ошибок](Practice_1/03_Decision_Tree/figures/03_09.png)
 
-[Разбор графика](Practice_1/03_Decision_Tree/README.md#figure-09)
-
-[Отчёт модели](Practice_1/03_Decision_Tree/README.md) · [Ноутбук](Practice_1/03_Decision_Tree/03_%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D0%BE_%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D0%B9_Raisin.ipynb) · [Практика](Practice_1/README.md#model-03)
+[Разбор графика](Practice_1/03_Decision_Tree/README.md#figure-09) · [Отчёт модели](Practice_1/03_Decision_Tree/README.md) · [Ноутбук](Practice_1/03_Decision_Tree/03_%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D0%BE_%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D0%B9_Raisin.ipynb)
 
 ### Случайный лес
 
-По матрице ошибок из 2709 тестовых объектов правильно классифицировано 2490, ошибочно — 219. Accuracy = 0.919. Наименьший Recall получен для класса SIRA: 0.858.
+Классификация семи сортов фасоли. Матрица позволяет определить, какие сорта распознаются лучше и какие чаще путаются между собой.
 
 ![Матрица ошибок](Practice_1/04_Random_Forest/figures/04_09.png)
 
-[Разбор графика](Practice_1/04_Random_Forest/README.md#figure-09)
+[Разбор графика](Practice_1/04_Random_Forest/README.md#figure-09) · [Отчёт модели](Practice_1/04_Random_Forest/README.md) · [Ноутбук](Practice_1/04_Random_Forest/04_%D0%A1%D0%BB%D1%83%D1%87%D0%B0%D0%B9%D0%BD%D1%8B%D0%B9_%D0%BB%D0%B5%D1%81_Dry_Bean.ipynb)
 
-[Отчёт модели](Practice_1/04_Random_Forest/README.md) · [Ноутбук](Practice_1/04_Random_Forest/04_%D0%A1%D0%BB%D1%83%D1%87%D0%B0%D0%B9%D0%BD%D1%8B%D0%B9_%D0%BB%D0%B5%D1%81_Dry_Bean.ipynb) · [Практика](Practice_1/README.md#model-04)
+### Полносвязная нейронная сеть (FCN)
 
-### Полносвязная сеть (FCN)
+Предсказание оформления срочного вклада. По матрице оценивается качество распознавания клиентов, оформивших и не оформивших вклад. При дисбалансе классов особенно важно учитывать полноту класса yes.
 
-По матрице ошибок из 116 тестовых объектов правильно классифицировано 82, ошибочно — 34. Accuracy = 0.707. Наименьший Recall получен для класса 1: 0.512.
+![Матрица ошибок](Practice_2/01_FCN/figures/01_08.png)
 
-![Матрица ошибок](Practice_2/01_FCN/figures/01_06.png)
+[Разбор графика](Practice_2/01_FCN/README.md#figure-08) · [Отчёт модели](Practice_2/01_FCN/README.md) · [Ноутбук](Practice_2/01_FCN/01_fcn_bank_marketing.ipynb)
 
-[Разбор графика](Practice_2/01_FCN/README.md#figure-06)
+### Свёрточная нейронная сеть (CNN)
 
-[Отчёт модели](Practice_2/01_FCN/README.md) · [Ноутбук](Practice_2/01_FCN/01_fcn_numpy_JupyterLite.ipynb) · [Практика](Practice_2/README.md#model-01)
+Классификация изображений одежды и обуви (10 классов). По матрице можно установить, какие категории одежды и обуви чаще ошибочно относятся к другим классам.
 
-### Сверточная сеть (CNN)
+![Матрица ошибок](Practice_2/02_CNN/figures/02_09.png)
 
-По матрице ошибок из 1797 тестовых объектов правильно классифицировано 1532, ошибочно — 265. Accuracy = 0.853. Наименьший Recall получен для класса 8: 0.741.
+[Разбор графика](Practice_2/02_CNN/README.md#figure-09) · [Отчёт модели](Practice_2/02_CNN/README.md) · [Ноутбук](Practice_2/02_CNN/02_cnn_fashion_mnist.ipynb)
 
-![Матрица ошибок](Practice_2/02_CNN/figures/02_07.png)
+### Рекуррентная нейронная сеть (RNN)
 
-[Разбор графика](Practice_2/02_CNN/README.md#figure-07)
+Прогноз температуры на следующий час по 24 предыдущим часовым наблюдениям. Сопоставление MAE и RMSE сети с прогнозом последнего наблюдения позволяет проверить, даёт ли нейронная сеть преимущество перед простым базовым методом.
 
-[Отчёт модели](Practice_2/02_CNN/README.md) · [Ноутбук](Practice_2/02_CNN/02_cnn_numpy_JupyterLite.ipynb) · [Практика](Practice_2/README.md#model-02)
+![Сравнение ошибок с базовой моделью](Practice_2/03_RNN/figures/03_12.png)
 
-### Рекуррентная сеть (RNN)
-
-Средняя абсолютная ошибка на тестовой выборке составила 1.739 °C, RMSE — 2.236 °C. R² = 0.671. Модель по квадратичной ошибке оказалась лучше прогноза среднего тестовой выборки.
-
-![Фактические и предсказанные значения](Practice_2/03_RNN/figures/03_07.png)
-
-[Разбор графика](Practice_2/03_RNN/README.md#figure-07)
-
-[Отчёт модели](Practice_2/03_RNN/README.md) · [Ноутбук](Practice_2/03_RNN/03_rnn_numpy_JupyterLite.ipynb) · [Практика](Practice_2/README.md#model-03)
+[Разбор графика](Practice_2/03_RNN/README.md#figure-12) · [Отчёт модели](Practice_2/03_RNN/README.md) · [Ноутбук](Practice_2/03_RNN/03_rnn_jena_climate.ipynb)
 
 <a name="conclusions"></a>
 
 ## Общий вывод
 
-Результаты разных моделей получены на разных наборах данных. Значения метрик характеризуют качество решения соответствующей задачи и не являются прямым рейтингом алгоритмов. Графики и численные показатели рассмотрены совместно.
+В первой практике рассмотрены задачи регрессии и классификации с использованием классических алгоритмов. Во второй практике представлены три архитектуры нейронных сетей для табличных данных, изображений и временных рядов. Для оценки качества предусмотрены отдельные тестовые выборки, а при обучении нейронных сетей также используются валидационные выборки.
+
+Поскольку модели решают разные задачи на разных наборах данных, значения их метрик нельзя использовать для прямого сравнения алгоритмов между собой. Численные итоги, интерпретация графиков и выводы о качестве отдельных моделей представлены в соответствующих отчётах.
+
+- [Итоги первой практики](Practice_1/README.md#conclusions)
+
+- [Итоги второй практики](Practice_2/README.md#conclusions)
 
 ## Используемые инструменты
 
-Python, Jupyter Notebook, NumPy, Pandas, Matplotlib, Seaborn, SciPy, Scikit-learn. Нейронные сети реализованы на NumPy.
+Python, Jupyter Notebook, NumPy, Pandas, Matplotlib, Seaborn, SciPy, Scikit-learn, PyTorch. Нейронные сети реализованы на PyTorch.
 
 ## Просмотр работ
 
-README каждого уровня содержит ссылки на соответствующие разделы. Полный набор графиков, пояснения и метрики расположены в отчёте каждой модели.
+В каждой папке модели находится отдельный README с описанием, графиками, метриками и ссылкой на ноутбук. Результаты выполнения сохраняются в файлах `.ipynb`, а изображения графиков размещаются в папках `figures` и отображаются непосредственно в README.
